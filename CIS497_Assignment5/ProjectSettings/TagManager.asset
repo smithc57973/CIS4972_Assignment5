@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spawner
   - UIManager
+  - GameManager
   layers:
   - Default
   - TransparentFX

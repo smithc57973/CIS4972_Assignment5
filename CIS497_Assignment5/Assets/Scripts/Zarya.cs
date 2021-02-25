@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * Ana
+ * Assignment 5
+ * A class to define Zarya Overwatch Heros.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +18,5 @@ public class Zarya : OverwatchHero
         this.role = "Tank";
         this.weapon = "Particle Cannon";
         this.ultimate = "Graviton Surge";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

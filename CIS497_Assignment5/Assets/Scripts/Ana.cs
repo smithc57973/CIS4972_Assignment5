@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * Ana
+ * Assignment 5
+ * A class to define Ana Overwatch Heros.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +18,5 @@ public class Ana : OverwatchHero
         this.role = "Support";
         this.weapon = "Biotic Rifle";
         this.ultimate = "Nano Boost";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

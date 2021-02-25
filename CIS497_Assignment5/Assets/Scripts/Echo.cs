@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * Ana
+ * Assignment 5
+ * A class to define Echo Overwatch Heros.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,11 +18,5 @@ public class Echo : OverwatchHero
         this.role = "DPS";
         this.weapon = "Tri-Shot";
         this.ultimate = "Duplicate";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

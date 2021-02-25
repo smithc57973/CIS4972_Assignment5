@@ -1,31 +1,41 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * OverwatchSpawner
+ * Assignment 5
+ * A script to manage OverwatchHero spawn requests.
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OverwatchSpawner : MonoBehaviour
 {
+    //vars
     public OverwatchFactory factory;
-    //public GameObject hero;
     public OverwatchHero hero;
-    UIManager ui;
+    public OverwatchHero h;
+    public OverwatchHero target;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        ui = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //For player choice, requests spawn and sets up spawning prefab
     public void SpawnHero(string type)
     {
         hero = factory.CreateHero(type);
         Vector3 spawnPos = new Vector3(0, 0, 0);
-        Instantiate(hero, spawnPos, Quaternion.identity);
-        ui.hint.text = hero.ToString();
+        h = Instantiate(hero, spawnPos, Quaternion.identity);
+        gm.choice.text = hero.ToString();
+    }
+
+    //For game target, requests spawn
+    public void ChooseHero(string type)
+    {
+        target = factory.CreateHero(type);
     }
 }
